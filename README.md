@@ -1,70 +1,181 @@
-# Getting Started with Create React App
+# 🎬 MovieSearch
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive movie search application built with cutting-edge web technologies. Search and discover movies, TV series, and episodes with a beautiful, intuitive interface.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-3178C6?style=flat-square&logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5.4.9-646CFF?style=flat-square&logo=vite)
+![TailwindCSS](https://img.shields.io/badge/Tailwind-3.4.14-38B2AC?style=flat-square&logo=tailwind-css)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+- 🔍 **Real-time Search** - Instant movie search with debounced API calls
+- 📱 **Responsive Design** - Seamless experience across all devices
+- ⚡ **Lightning Fast** - Built with Vite for optimal performance
+- 🎨 **Modern UI** - Beautiful interface with Tailwind CSS
+- 🔄 **Smart Caching** - TanStack Query for efficient data management
+- 🛡️ **Type-Safe** - Full TypeScript support for better code quality
+- ♿ **Accessible** - WCAG compliant with semantic HTML
+- 🎯 **Error Handling** - Graceful error states and loading indicators
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Core
+- **React 18.3** - Modern React with hooks and concurrent features
+- **TypeScript 5.6** - Type-safe development
+- **Vite 5.4** - Next-generation frontend tooling
 
-### `npm test`
+### State & Data
+- **TanStack Query** - Powerful asynchronous state management
+- **React Hooks** - Custom hooks for reusable logic
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Styling
+- **Tailwind CSS 3.4** - Utility-first CSS framework
+- **Lucide React** - Beautiful, consistent icons
 
-### `npm run build`
+### Code Quality
+- **ESLint** - Code linting and best practices
+- **Prettier** - Code formatting
+- **TypeScript ESLint** - TypeScript-specific linting rules
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📦 Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
+- Node.js 18+
+- npm, yarn, or pnpm
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Setup
 
-### `npm run eject`
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/MovieSearch.git
+cd MovieSearch
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Create environment file
+cp .env.example .env
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Add your OMDB API key to .env
+# VITE_OMDB_API_KEY=your_api_key_here
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Start development server
+npm run dev
+```
 
-## Learn More
+## 🎮 Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+# Development server
+npm run dev
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Build for production
+npm run build
 
-### Code Splitting
+# Preview production build
+npm run preview
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Lint code
+npm run lint
 
-### Analyzing the Bundle Size
+# Format code
+npm run format
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🏗️ Project Structure
 
-### Making a Progressive Web App
+```
+MovieSearch/
+├── src/
+│   ├── components/          # React components
+│   │   ├── MovieCard.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── LoadingSpinner.tsx
+│   │   ├── ErrorMessage.tsx
+│   │   └── EmptyState.tsx
+│   ├── hooks/              # Custom React hooks
+│   │   └── useMovies.ts
+│   ├── services/           # API services
+│   │   └── api.ts
+│   ├── types/              # TypeScript types
+│   │   └── movie.ts
+│   ├── App.tsx             # Main app component
+│   ├── main.tsx            # App entry point
+│   └── index.css           # Global styles
+├── public/                 # Static assets
+├── index.html              # HTML template
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json           # TypeScript configuration
+├── tailwind.config.js      # Tailwind configuration
+└── package.json            # Project dependencies
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 🔑 Environment Variables
 
-### Advanced Configuration
+Create a `.env` file in the root directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```env
+VITE_OMDB_API_KEY=your_omdb_api_key
+```
 
-### Deployment
+Get your free API key from [OMDb API](http://www.omdbapi.com/apikey.aspx)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🎨 Key Features Explained
 
-### `npm run build` fails to minify
+### TanStack Query Integration
+- Automatic caching and background refetching
+- Optimistic updates
+- Built-in retry logic
+- Query invalidation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### TypeScript Benefits
+- Type-safe API responses
+- Autocomplete and IntelliSense
+- Compile-time error detection
+- Better refactoring support
+
+### Responsive Design
+- Mobile-first approach
+- Flexbox and CSS Grid layouts
+- Tailwind's responsive utilities
+- Optimized for all screen sizes
+
+## 🧪 Best Practices
+
+- **Component Architecture** - Modular, reusable components
+- **Custom Hooks** - Extracted business logic
+- **Error Boundaries** - Graceful error handling
+- **Loading States** - Better user experience
+- **Type Safety** - Full TypeScript coverage
+- **Code Quality** - ESLint and Prettier configured
+- **Performance** - Optimized builds with Vite
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 👨‍💻 Author
+
+Built with ❤️ for learning modern web development
+
+## 🙏 Acknowledgments
+
+- [OMDb API](http://www.omdbapi.com/) for providing the movie data
+- [Vite](https://vitejs.dev/) for the amazing build tool
+- [TanStack Query](https://tanstack.com/query) for powerful data fetching
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
+
+---
+
+⭐ Star this repo if you found it helpful!
